@@ -1,54 +1,83 @@
+import React from "react";
 import { HugeiconsIcon } from "@hugeicons/react";
 import { Linkedin01Icon, GithubIcon } from "@hugeicons/core-free-icons";
 
 function Header() {
+  const navItems = [
+    { label: "HOME", href: "#home" },
+    { label: "ABOUT", href: "#about" },
+    { label: "PROJECTS", href: "#projects" },
+    { label: "SKILLS", href: "#skills" },
+    { label: "EXPERIENCE", href: "#experience" },
+    { label: "CONTACT", href: "#contact" },
+  ];
+
   return (
-    <>
-      <div className="flex justify-around items-center pt-5  gap-15 ">
-        <div className="h-14 w-20 text-center drop-shadow-[0_0_10px_#39D9FF]">
-          <p className="font-[Orbitron] text-[20px] text-white">ASMIT </p>
-          <p className="font-[Orbitron] text-[10px] text-[#39D9FF] ">
+    <header className="w-full px-6 py-4">
+      <div className="max-w-7xl mx-auto flex justify-between items-center gap-4">
+        {/* Brand Logo */}
+        <a
+          href="#home"
+          className="group flex flex-col items-center justify-center drop-shadow-[0_0_10px_#39D9FF]"
+        >
+          <span className="font-['Orbitron',sans-serif] text-xl font-extrabold tracking-wider text-white group-hover:text-[#39D9FF] transition-colors">
+            ASMIT
+          </span>
+          <span className="font-['Orbitron',sans-serif] text-[10px] tracking-widest text-[#39D9FF]">
             PORTFOLIO
-          </p>
-        </div>
-        <div className="flex font-[Orbitron] text-white gap-7 text-[12px] font-bold  bg-white/10  backdrop-blur-xs w-[45vw] h-[8vh]  rounded-4xl  items-center justify-center border border-[#4c3cff]/30 ">
-          <ul className="hover:border-b hover:shadow-cyan-800 hover:shadow-2xs  hover:text-[#39D9FF] cursor-pointer hover:hover:scale-120 transition-transform duration-300 origin-top">
-            HOME
+          </span>
+        </a>
+
+        {/* Central Pill Navigation */}
+        <nav className="hidden md:flex items-center justify-center font-['Orbitron',sans-serif] text-white text-xs font-bold bg-white/5 backdrop-blur-md px-8 py-3 rounded-full border border-[#4c3cff]/30 shadow-[0_0_20px_rgba(76,60,255,0.15)] sticky top-4 z-50">
+          <ul className="flex items-center gap-6 lg:gap-8">
+            {navItems.map((item) => (
+              <li key={item.label}>
+                <a
+                  href={item.href}
+                  className="relative py-1 text-gray-300 hover:text-[#39D9FF] transition-all duration-300 hover:scale-105 inline-block origin-center tracking-wider after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#39D9FF] after:shadow-[0_0_8px_#39D9FF] hover:after:w-full after:transition-all after:duration-300"
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
           </ul>
-          <ul className="hover:border-b hover:shadow-cyan-800 hover:shadow-2xs  hover:text-[#39D9FF] cursor-pointer hover:hover:scale-120 transition-transform duration-300 origin-top">
-            ABOUT
-          </ul>
-          <ul className="hover:border-b hover:shadow-cyan-800 hover:shadow-2xs  hover:text-[#39D9FF] cursor-pointer hover:hover:scale-120 transition-transform duration-300 origin-top">
-            PROJECTS
-          </ul>
-          <ul className="hover:border-b hover:shadow-cyan-800 hover:shadow-2xs  hover:text-[#39D9FF] cursor-pointer hover:hover:scale-120 transition-transform duration-300 origin-top">
-            SKILLS
-          </ul>
-          <ul className="hover:border-b hover:shadow-cyan-800 hover:shadow-2xs  hover:text-[#39D9FF] cursor-pointer hover:hover:scale-120 transition-transform duration-300 origin-top">
-            EXPERIENCE
-          </ul>
-          <ul className="hover:border-b hover:shadow-cyan-800 hover:shadow-2xs  hover:text-[#39D9FF] cursor-pointer hover:hover:scale-120 transition-transform duration-300 origin-top">
-            CONTACT
-          </ul>
-        </div>
-        <div className="flex gap-3 justify-center items-center">
-          <HugeiconsIcon
-            icon={Linkedin01Icon}
-            size={30}
-            color="#ffffff"
-            strokeWidth={1.5}
-            className=" w-12 h-12 p-2 rounded-xl  bg-[#050816]/60 backdrop-blur-md border border-[#4c3cff]/30 shadow-[0_0_15px_rgba(76,60,255,0.25)]"
-          />
-          <HugeiconsIcon
-            icon={GithubIcon}
-            size={30}
-            color="#ffffff"
-            strokeWidth={1.5}
-            className=" w-12 h-12 p-2 rounded-xl  bg-[#050816]/60 backdrop-blur-md border border-[#4c3cff]/30 shadow-[0_0_15px_rgba(76,60,255,0.25)]"
-          />
+        </nav>
+
+        {/* Social Icons Links */}
+        <div className="flex gap-3 items-center">
+          <a
+            href="https://www.linkedin.com/in/asmit-yadav-9432b2319/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn Profile"
+            className="p-2.5 rounded-xl bg-[#050816]/70 backdrop-blur-md border border-[#4c3cff]/40 shadow-[0_0_15px_rgba(76,60,255,0.25)] hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(34,211,238,0.5)] hover:scale-110 active:scale-95 transition-all duration-300"
+          >
+            <HugeiconsIcon
+              icon={Linkedin01Icon}
+              size={20}
+              color="#ffffff"
+              strokeWidth={1.5}
+            />
+          </a>
+
+          <a
+            href="https://github.com/Asmit-Yadav07"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub Profile"
+            className="p-2.5 rounded-xl bg-[#050816]/70 backdrop-blur-md border border-[#4c3cff]/40 shadow-[0_0_15px_rgba(76,60,255,0.25)] hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(34,211,238,0.5)] hover:scale-110 active:scale-95 transition-all duration-300"
+          >
+            <HugeiconsIcon
+              icon={GithubIcon}
+              size={20}
+              color="#ffffff"
+              strokeWidth={1.5}
+            />
+          </a>
         </div>
       </div>
-    </>
+    </header>
   );
 }
 
