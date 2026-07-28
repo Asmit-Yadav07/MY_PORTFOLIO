@@ -1,6 +1,7 @@
 // import { useState } from "react";
 import "./App.css";
 import Header from "../Components/Header.js";
+import Section1 from "../Components/Section1.js";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -26,10 +27,11 @@ function App() {
       <div className="relative w-screen h-screen overflow-hidden z-50">
         <img
           src="../public/WholeBackground.png"
-          className="absolute inset-0 w-full h-full object-cover brightness-80"
+          className="absolute inset-0 w-full h-full object-cover brightness-50"
         ></img>
         <div className="absolute inset-0 z-45">
           <Header />
+          <Section1 />
         </div>
       </div>
     </>
