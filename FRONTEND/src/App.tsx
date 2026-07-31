@@ -1,38 +1,23 @@
 // import { useState } from "react";
 import "./App.css";
-import Header from "../Components/Header.js";
-import Section1 from "../Components/Section1.js";
-import Card from "../Components/Card.js";
+import Header from "../Components/Header";
+import Section1 from "../Components/Section1";
+import Card from "../Components/Card";
 
 function App() {
   // const [count, setCount] = useState(0);
 
   return (
     <>
-      {/* <div className="relative w-screen h-screen overflow-hidden z-50">
-
+      <div className="absolute w-screen h-screen z-50">
         <img
-          src="/Background.png"
+          src="/WholeBackground.png"
           alt="Background"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="fixed inset-0 w-screen h-screen object-cover brightness-50"
         />
-
-   
-        <img
-          src="../public/Charactercopy.png"
-          alt="Character"
-          className="absolute left-1/2 -translate-x-1/2  top-3 h-[80vh] object-contain z-50"
-        />
-        <div className="absolute inset-0   bg-white/10 z-10" />
-      </div> */}
-      <div className="relative w-screen h-screen overflow-hidden z-50">
-        <img
-          src="../public/WholeBackground.png"
-          className="absolute inset-0 w-full h-full object-cover brightness-50"
-        ></img>
-        <div className="absolute inset-0 z-45">
+        <div className="relative inset-0">
           <Header />
-          <div className="flex items-center gap-6 overflow-x-auto overflow-y-visible py-8 px-4">
+          <div className="flex items-center gap-6 py-8 px-4 overflow-hidden">
             <Section1 />
             <p className="text-[#C770FF] drop-shadow-[0_0_18px_#C770FF] font-bold absolute mb-[60vh] ml-[58vw] font-['Orbitron',sans-serif] text-[1.5vw]">
               Featured Projects
@@ -74,7 +59,7 @@ function App() {
               heading="URL SHORTNER"
               subheading="REDIRECTING URLs"
               skill="EXPRESS"
-              height={320}
+              height={250}
               width={160}
               url="/images-5.jpeg"
               contentHeight={130}
@@ -84,6 +69,16 @@ function App() {
               buttonWidth={85}
               buttonText={9}
             />
+          </div>
+          <div className="relative bottom-12 ml-[70vw]">
+            <p className="text-gray-300 font-serif text-[1vw] w-[25vw]">
+              Design is not just what it looks like and feels like. Design is
+              how it works.
+            </p>
+
+            <p className="font-['Orbitron',sans-serif] text-[#39D9FF] mt-2 text-sm ml-[15vw]">
+              ~ Steve Jobs
+            </p>
           </div>
         </div>
       </div>
