@@ -2,6 +2,7 @@
 import "./App.css";
 import Header from "../Components/Header.js";
 import Section1 from "../Components/Section1.js";
+import Card from "../Components/Card.js";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -31,7 +32,15 @@ function App() {
         ></img>
         <div className="absolute inset-0 z-45">
           <Header />
-          <Section1 />
+          <div className="flex items-center ">
+            <Section1 />
+            <Card
+              serialno={1}
+              heading="ASMIT PORTFOLIO"
+              subheading="PERSONAL PORTFOLIO WEBSITE"
+              skill="MERN"
+            />
+          </div>
         </div>
       </div>
     </>
