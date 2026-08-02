@@ -13,7 +13,7 @@ function Header() {
   ];
 
   return (
-    <header className="w-full px-6 py-4">
+    <header className="sticky top-0 z-50 w-full px-6 py-4 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.5)] transition-all duration-300">
       <div className="max-w-7xl mx-auto flex justify-between items-center gap-4">
         {/* Brand Logo */}
         <a
@@ -29,7 +29,7 @@ function Header() {
         </a>
 
         {/* Central Pill Navigation */}
-        <nav className="hidden md:flex items-center justify-center font-['Orbitron',sans-serif] text-white text-xs font-bold bg-white/5 backdrop-blur-md px-8 py-3 rounded-full border border-[#4c3cff]/30 shadow-[0_0_20px_rgba(76,60,255,0.15)] sticky top-4 z-50">
+        <nav className="hidden md:flex items-center justify-center font-['Orbitron',sans-serif] text-white text-xs font-bold bg-white/5 backdrop-blur-md px-8 py-3 rounded-full border border-[#4c3cff]/30 shadow-[0_0_20px_rgba(76,60,255,0.15)]">
           <ul className="flex items-center gap-6 lg:gap-8">
             {navItems.map((item) => (
               <li key={item.label}>

@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "../Components/Header";
 import Section1 from "../Components/Section1";
 import Card from "../Components/Card";
+import Section2 from "../Components/Section2";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -81,6 +82,7 @@ function App() {
             </p>
           </div>
         </div>
+        <Section2 />
       </div>
     </>
   );
