@@ -13,7 +13,7 @@ function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full px-6 py-4 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.5)] transition-all duration-300">
+    <header className="fixed top-0 z-50 w-full px-6 py-4 backdrop-blur-md shadow-[0_10px_30px_rgba(0,0,0,0.5)] transition-all duration-300">
       <div className="max-w-7xl mx-auto flex justify-between items-center gap-4">
         {/* Brand Logo */}
         <a

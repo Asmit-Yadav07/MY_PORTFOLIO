@@ -14,7 +14,7 @@ function Section2() {
   const infoItems = [
     { icon: CoPresentIcon, label: "Name", value: "Asmit" },
     { icon: Location04Icon, label: "Location", value: "India" },
-    { icon: WorkIcon, label: "Experience", value: "Still Working" },
+    { icon: WorkIcon, label: "Experience", value: "1.5+ yr of Coding" },
     {
       icon: CheckmarkBadge03Icon,
       label: "Availability",
@@ -83,7 +83,7 @@ function Section2() {
       </div>
 
       {/* RIGHT COLUMN: Glassmorphic Quick Info Grid */}
-      <div className="w-full xl:w-auto border border-[#4c3cff]/40 bg-[#050816]/70 backdrop-blur-md p-6 rounded-3xl shadow-[0_0_30px_rgba(76,60,255,0.2)]">
+      <div className="w-full xl:w-auto border border-[#4c3cff]/40 bg-[#050816]/70 backdrop-blur-md p-6 rounded-3xl shadow-[0_0_30px_rgba(76,60,255,0.2)] mt-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {infoItems.map((item, idx) => (
             <div
