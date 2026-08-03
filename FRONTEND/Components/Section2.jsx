@@ -61,6 +61,14 @@ function Section2() {
         {/* Download Resume Button */}
         <button
           type="button"
+          onClick={() => {
+            const link = document.createElement("a");
+            link.href = "/AsmitYadav-Resume.pdf";
+            link.download = "Asmit_Resume.pdf";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+          }}
           className="flex h-14 w-60 rounded-3xl items-center justify-between px-5
               border border-purple-500/50 bg-[#050816]/70 backdrop-blur-md
               font-semibold text-sm tracking-wider
@@ -68,7 +76,7 @@ function Section2() {
               hover:shadow-[0_0_20px_rgba(192,132,252,0.6),inset_0_0_20px_rgba(192,132,252,0.25)]
               hover:border-purple-400 hover:scale-[1.02] active:scale-95 transition-all duration-300 cursor-pointer"
         >
-          <div className="flex gap-1.5 font-bold">
+          <div className="flex gap-1.5 font-bold cursor-pointer hover:opacity-80 transition-opacity">
             <span className="text-[#39D9FF]">Download Resume</span>
           </div>
           <div className="flex items-center justify-center p-2 rounded-xl bg-[#050816]/80 border border-[#4c3cff]/40 shadow-[0_0_15px_rgba(76,60,255,0.3)] group-hover:border-purple-400/60 transition-colors">

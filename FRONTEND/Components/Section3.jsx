@@ -2,6 +2,7 @@ import React from "react";
 import { HugeiconsIcon } from "@hugeicons/react";
 import {
   ReactIcon,
+  SubnodeAddIcon,
   Typescript03Icon,
   BiscuitIcon,
   DatabaseIcon,
@@ -11,7 +12,7 @@ import {
 function Section3() {
   const infoItems = [
     { icon: ReactIcon, skillName: "React", value: 90 },
-    { icon: ReactIcon, skillName: "Node.js / Express", value: 85 },
+    { icon: SubnodeAddIcon, skillName: "Node.js / Express", value: 85 },
     { icon: Typescript03Icon, skillName: "TypeScript / JavaScript", value: 90 },
     { icon: BiscuitIcon, skillName: "UI/UX Design", value: 80 },
     { icon: DatabaseIcon, skillName: "MongoDB / SQL", value: 90 },
@@ -30,7 +31,7 @@ function Section3() {
   ];
 
   return (
-    <div className="w-[60vw] min-h-[60vh] p-6 text-white">
+    <div className="w-[60vw] p-8 ml-[20vw] mt-8 text-white bg-[#0B071E]/60 backdrop-blur-md border border-[#2E1E54] rounded-[32px] shadow-[0_0_25px_rgba(11,7,30,0.8)] hover:-translate-y-2 hover:scale-[1.02] hover:border-[#9B51E0]/60 hover:shadow-[0_0_35px_rgba(155,81,224,0.3)] transition-all duration-300 ease-out">
       {/* Gradient Heading */}
       <h2
         className="text-2xl font-bold font-['Orbitron',sans-serif] uppercase mb-6"
@@ -59,7 +60,7 @@ function Section3() {
             <p className="w-52 font-medium">{item.skillName}</p>
 
             {/* Outer Track */}
-            <div className="h-4 w-60 bg-[#0B071E] border border-[#2E1E54] rounded-full p-[2px] shadow-inner">
+            <div className="h-4 w-60 bg-[#05030E] border border-[#2E1E54] rounded-full p-[2px] shadow-inner">
               {/* Inner Fill with Glow */}
               <div
                 className="h-full bg-gradient-to-r from-[#6B2FD6] to-[#D896FF] rounded-full shadow-[0_0_12px_rgba(216,150,255,0.7)] transition-all duration-500 ease-out"
@@ -73,11 +74,11 @@ function Section3() {
       </div>
 
       {/* Skill Pills Badges */}
-      <div className="flex flex-wrap gap-3 mt-6">
+      <div className="flex flex-wrap gap-4 mt-6">
         {skillBadges.map((badge, index) => (
           <div
             key={index}
-            className="px-4 py-1.5 border border-[#2E1E54] bg-[#0B071E]/80 rounded-full text-white text-sm font-medium text-center hover:border-[#D896FF] hover:shadow-[0_0_10px_rgba(216,150,255,0.4)] transition-all cursor-default"
+            className="px-4 py-1.5 border border-[#2E1E54] bg-[#05030E]/80 rounded-full text-white text-sm font-medium text-center hover:border-[#D896FF] hover:shadow-[0_0_10px_rgba(216,150,255,0.4)] transition-all cursor-default"
           >
             {badge}
           </div>
