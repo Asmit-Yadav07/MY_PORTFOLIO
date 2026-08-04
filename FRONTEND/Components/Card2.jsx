@@ -16,6 +16,7 @@ function Card2({
   buttonHeight = 40,
   buttonWidth = 130,
   buttonText = 13,
+  projectlink = "#",
 }) {
   return (
     <div
@@ -74,9 +75,12 @@ function Card2({
           </p>
         </div>
 
-        {/* Dynamic Action Button */}
-        <button
-          className="mt-3 flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-4 py-2 font-medium text-white transition-colors duration-200 hover:bg-blue-500 active:scale-95"
+        {/* Dynamic Link Button */}
+        <a
+          href={projectlink || "#"}
+          target={projectlink ? "_blank" : "_self"}
+          rel="noopener noreferrer"
+          className="mt-3 inline-flex items-center justify-center gap-2 rounded-xl bg-blue-600 px-4 py-2 font-medium text-white transition-colors duration-200 hover:bg-blue-500 active:scale-95"
           style={{
             height: buttonHeight ? `${buttonHeight}px` : "auto",
             width: buttonWidth ? `${buttonWidth}px` : "auto",
@@ -90,7 +94,7 @@ function Card2({
             color="#ffffff"
             strokeWidth={2}
           />
-        </button>
+        </a>
       </div>
     </div>
   );
